@@ -1,0 +1,159 @@
+.footer {
+  padding: 22px 0;
+  background-color: #eaeaea;
+  @include laptop {
+    padding: 25px 0 18px 0;
+  }
+  @include tablet {
+    padding: 25px 0 20px 0;
+  }
+  @include mobile {
+    padding-top: 22px;
+    padding-bottom: 20px;
+  }
+
+  &-content {
+    display: flex;
+    @include tablet {
+      flex-direction: column;
+    }
+
+    &-left {
+      max-width: 20%;
+      margin-right: auto;
+      @include tablet {
+        max-width: 100%;
+        margin-right: 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      @include mobile {
+        display: initial;
+        margin: 0 auto 25px auto;
+      }
+    }
+    &__logo {
+      margin-bottom: 30px;
+      @include tablet {
+        margin-bottom: 25px;
+      }
+      @include mobile {
+        margin-bottom: 21px;
+      }
+    }
+  }
+  &__social-list {
+    display: flex;
+    flex-wrap: wrap;
+    @include mobile {
+      justify-content: center;
+    }
+  }
+  &__about-list {
+    max-width: 25%;
+    @include mobile {
+      max-width: inherit;
+      width: 47%;
+    }
+  }
+  &__social-item:not(:last-child) {
+    margin-right: 20px;
+  }
+  &__social-link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    fill: var(--color-grey);
+    outline: none;
+    transition: 0.3s ease-in-out;
+  }
+  &__social-link:hover {
+    fill: var(--color-primary);
+  }
+  &__social-link:focus {
+    fill: var(--color-primary-hover);
+    outline: none;
+  }
+  &__social-link:active {
+    fill: var(--color-primary-focusactive);
+  }
+  &__social-icon {
+    width: 100%;
+    height: 100%;
+  }
+  &-list-link {
+    padding-top: 3px;
+    width: 66%;
+    display: flex;
+    @include laptop {
+      width: 77%;
+    }
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+  &__about-list_one {
+    margin-right: 109px;
+    @include laptop {
+      margin-right: 74px;
+    }
+    @include tablet {
+      margin-right: 38px;
+    }
+    @include mobile {
+      margin-right: auto;
+    }
+  }
+  &__about-list_two {
+    margin-right: 130px;
+    @include laptop {
+      margin-right: 95px;
+    }
+    @include tablet {
+      margin-right: 58px;
+    }
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+  &__about-list_three {
+    margin-right: auto;
+  }
+  &__item_heading,
+  &__about-item {
+    margin-bottom: 5px;
+  }
+  &__about-item {
+    padding-left: 2px;
+    @include laptop {
+      padding-left: 0;
+    }
+  }
+  &__link-heading {
+    font: var(--font-small-sans);
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--color-black);
+    @include laptop {
+      padding-left: 1px;
+    }
+    @include mobile {
+      padding-left: 0;
+    }
+  }
+}
+.link-sdp {
+  @include mobile {
+    padding: 0;
+  }
+}
+.footer__about-list:nth-child(1),
+.footer__about-list:nth-child(2) {
+  @include mobile {
+    margin-bottom: 18px;
+  }
+}
+

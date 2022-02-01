@@ -1,0 +1,158 @@
+.heading-offset {
+  margin-bottom: 25px;
+}
+
+.raiting {
+  padding: var(--section-offset) 0;
+  padding-bottom: 70px;
+  @include mobile {
+    padding-top: 45px;
+  }
+
+  &-star {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 32px;
+    left: 30px;
+    @include laptop {
+      top: 33px;
+    }
+    @include mobile {
+      top: 18px;
+      left: 16px;
+    }
+
+    &__icon {
+      width: 16px;
+      height: 16px;
+      fill: #ff862f;
+      @include mobile {
+        transform: scale(.8);
+      }
+    }
+    &__number {
+      margin-left: 7px;
+      font: var(--font-small-sans);
+      font-size: 16px;
+      color: #ff862f;
+      @include mobile {
+        margin-left: 5px;
+        font-size: 12px;
+        transform: translateY(1px);
+      }
+    }
+  }
+  &-price {
+    margin: 0;
+    margin-bottom: 22px;
+    font: var(--font-small-sans);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-grey);
+  }
+
+  &__list {
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+    @include laptop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      column-gap: 16px;
+      row-gap: 17px;
+    }
+  }
+  &-item {
+    position: relative;
+    display: grid;
+    grid-template-rows: 150px min-content min-content auto;
+    padding: 57px 15px 15px;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    @include mobile {
+      padding: 53px 0 0;
+      grid-template-rows: 54px min-content min-content auto;
+    }
+
+    &-hidden {
+      display: none;
+    }
+    &-hidden-tablet {
+      @include laptop{
+        display: none;
+      }
+    }
+  }
+  &-item img {
+    @include mobile {
+      margin: 0;
+      width: 80%;
+      align-self: flex-start;
+      object-fit: contain;
+    }
+  }
+  &__btn-more {
+    display: block;
+    margin: 0 auto;
+    padding: 22px 37px;
+    @include mobile {
+      padding: 22px 34px;
+    }
+  }
+  &-subtitle,
+  &-price,
+  &-btn {
+    margin-left: 15px;
+    @include tablet {
+      margin-left: 0;
+    }
+  }
+  &-btn {
+    width: 130px;
+    margin-bottom: 15px;
+    align-self: end;
+    @include tablet {
+      margin-left: 15px;
+    }
+    @include mobile {
+      width: 80%;
+      margin-left: 0;
+      padding: 12px 22px;
+      justify-self: center;
+    }
+  }
+  &-subtitle,
+  &-price {
+    @include tablet {
+      padding: 0 16px;
+    }
+    @include mobile {
+      margin: 0 0 16px;
+      font-size: 16px;
+      line-height: 20.8px;
+    }
+  }
+  &-subtitle {
+    margin-bottom: 20px;
+    @include laptop {
+      margin-left: 0;
+      padding: 0 10px 0 15px;
+    }
+    @include mobile {
+      margin-bottom: 19px;
+    }
+  }
+  &-price {
+    @include mobile {
+      margin-bottom: 12px;
+    }
+  }
+}

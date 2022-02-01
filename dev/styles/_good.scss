@@ -1,0 +1,54 @@
+.good {
+  padding: var(--section-offset) 0;
+  @include mobile {
+    padding-bottom: 60px;
+  }
+
+  &-slide {
+    border-radius: 0 0 10px 10px;
+    background-color: #f7f7f7;
+    @include mobile {
+      margin-bottom: 3px;
+    }
+  }
+  &__img {
+    @include mobile {
+      width: 100%;
+    }
+  }
+  &-description-block {
+    padding: 30px;
+    padding-right: 31px;
+    display: grid;
+    grid-template-rows: minmax(100px, auto) auto;
+    row-gap: 34px;
+    @include laptop {
+      grid-template-rows: minmax(110px, auto) auto;
+      padding: 30px 37px 30px 30px;
+      row-gap: 28px;
+    }
+    @include tablet {
+      row-gap: 27px;
+    }
+    @include mobile {
+      padding: 27px 36px 30px 30px;
+    }
+    &__subtitle {
+      margin: 0;
+      font: var(--font-small-sans);
+      font-size: 24px;
+      line-height: 32.68px;
+      color: var(--color-black);
+      @include laptop{
+        font-size: 16px;
+        line-height: 21.79px;
+      }
+    }
+    &__link {
+      width: 56px;
+      display: block;
+      align-self: end;
+    }
+  }
+}
+

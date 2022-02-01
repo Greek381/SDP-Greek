@@ -1,0 +1,264 @@
+.modal,
+.modal-swiper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: all .3s ease-in-out;
+  &-buy-oneclick {
+    position: relative;
+    padding: 30px;
+    width: 624px;
+    height: 421px;
+    background: var(--color-white);
+    border-radius: 10px;
+    z-index: 9999;
+    display: none;
+    @include mobile {
+      padding: 30px 16px 30px 16px;
+      width: 296px;
+      height: 387px;
+    }
+    &__title,
+    &__subtitle {
+      margin: 0 0 8px 0;
+      font: var(--font-small-sans);
+      font-size: 32px;
+      line-height: 32px;
+      color: var(--color-black);
+      @include mobile {
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+    &__subtitle {
+      margin: 0 0 30px 0;
+      font-size: 14px;
+      line-height: 19.07px;
+      @include mobile {
+        margin: 0 0 16px 0;
+      }
+    }
+    &-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 20px;
+      height: 20px;
+      @include mobile {
+        top: 16px;
+        right: 16px;
+        width: 16px;
+        height: 16px;
+      }
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 2px;
+        height: 20px;
+        background-color: var(--color-grey);
+        transform: rotate(45deg);
+        @include mobile {
+          height: 16px;
+        }
+      }
+      &::before {
+        transform: rotate(-45deg);
+      }
+      &-swiper {
+        display: none;
+      }
+      &-swiper-visible {
+        display: block;
+      }
+    }
+    &__group {
+      @include mobile {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &-visible {
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease-in-out;
+  }
+  &-buy-oneclick-visible {
+    display: block;
+  }
+
+  &-callback {
+    position: relative;
+    width: 624px;
+    height: 421px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--color-white);
+    border-radius: 10px;
+    display: none;
+    @include mobile {
+      width: 296px;
+      height: 216px;
+    }
+    &__img {
+      margin-bottom: 32px;
+      @include mobile {
+        margin-bottom: 14px;
+        width: 73px;
+      }
+    }
+    &__text {
+      margin: 0;
+      font: var(--font-small-sans);
+      font-size: 32px;
+      line-height: 32px;
+      color: var(--color-black);
+      @include mobile {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+  }
+  &-callback-visible {
+    display: flex;
+  }
+
+  &-block {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 9999;
+    display: none;
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+}
+
+.modal-card-slider {
+  margin: auto;
+  position: relative;
+  padding: 50px;
+  width: 1280px;
+  height: 684px;
+  z-index: 9999;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  @include laptop {
+    padding: 50px 65px 20px 65px;
+    width: 952px;
+    height: 588px;
+  }
+  @include tablet {
+    padding: 50px 20px 20px 20px;
+    width: 624px;
+    height: 494px;
+  }
+  @include mobile {
+    padding: 32px 16px 16px 16px;
+    width: 296px;
+    height: 286px;
+  }
+
+  .slider-block {
+    height: 418px;
+    @include laptop {
+      height: 322px;
+    }
+    @include tablet {
+      height: 228px;
+    }
+    @include mobile {
+      height: 104px;
+    }
+  }
+  .card-swiper-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider-nav_modal {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    padding: 20px 50px;
+    width: 100%;
+    height: 166px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    @include mobile {
+      padding: 16px 62px;
+      height: 118px;
+    }
+  }
+  .slider-nav__item_modal {
+    height: 126px;
+    @include mobile {
+      height: 86px;
+    }
+  }
+  .swiper-modal-button-prev,
+  .swiper-modal-button-next {
+    @include laptop {
+      top: 67px;
+    }
+    @include mobile {
+      top: 43px;
+    }
+  }
+  .swiper-modal-button-prev {
+    @include laptop {
+      left: 16px;
+    }
+    @include mobile {
+      right: 228px;
+    }
+  }
+  .swiper-modal-button-next {
+    @include laptop {
+      right: 16px;
+    }
+    @include mobile {
+      right: -228px;
+    }
+  }
+  .card-description-mobile {
+    display: none;
+  }
+}
+
+.modal-swiper-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: all .3s ease-in-out;
+  &-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}

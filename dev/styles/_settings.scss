@@ -1,0 +1,135 @@
+html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  @import './mixins';
+
+
+  body {
+    margin: 0;
+    font-family: "Open sans", sans-serif;
+    background-color: var(--color-white);
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-container {
+    overflow: hidden;
+  }
+
+  .for-mobile {
+    display: none;
+  }
+
+  .btn-reset {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1310px;
+    @include laptop {
+      padding: 0 36px;
+    }
+    @include tablet {
+      padding: 0 72px;
+    }
+    @include mobile {
+      padding: 0 12px;
+    }
+  }
+
+  .js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+  }
+
+  /* for pixel perfect */
+  // html {
+  //   background-image: url('./img/1920.png');
+  //   background-repeat: no-repeat;
+  //   background-position:  50% 0;
+  //   @include laptop {
+  //     background-image: url('./img/1024.png');
+  //   }
+  //   @include tablet {
+  //     background-image: url('./img/768.png');
+  //   }
+  //   @include mobile {
+  //     background-image: url('./img/320.png');
+  //   }
+  // }
+  // body {
+  //   opacity: .3;
+  // }
+  // html {
+  //   background-image: url('./img/1920-catalog.png');
+  //   background-repeat: no-repeat;
+  //   background-position:  50% 0;
+  //   @include laptop {
+  //     background-image: url('./img/1024-catalog.png');
+  //   }
+  //   @include tablet {
+  //     background-image: url('./img/768-catalog.png');
+  //   }
+  //   @include mobile {
+  //     background-image: url('./img/320-catalog.png');
+  //   }
+  // }
+  // body {
+  //   opacity: .3;
+  // }
+  // html {
+  //   background-image: url('./img/1920-card-tovar.png');
+  //   background-repeat: no-repeat;
+  //   background-position:  50% 0;
+  //   @include laptop {
+  //     background-image: url('./img/1024-card-tovar.png');
+  //   }
+  //   @include tablet {
+  //     background-image: url('./img/768-card-tovar.png');
+  //   }
+  //   @include mobile {
+  //     background-image: url('./img/320-card-tovar.png');
+  //   }
+  // }
+  // body {
+  //   opacity: .3;
+  // }
+  // html {
+  //   background-image: url('./img/1920-cooperation.png');
+  //   background-repeat: no-repeat;
+  //   background-position:  50% 0;
+  //   @include laptop {
+  //     background-image: url('./img/1024-cooperation.png');
+  //   }
+  //   @include tablet {
+  //     background-image: url('./img/768-cooperation.png');
+  //   }
+  //   @include mobile {
+  //     background-image: url('./img/320-cooperation.png');
+  //   }
+  // }
+  // body {
+  //   opacity: .3;
+  // }

@@ -1,0 +1,31 @@
+.catalog-links {
+  padding-top: 6px;
+  padding-bottom: 15px;
+  @include laptop {
+    padding-top: 3px;
+  }
+  @include tablet {
+    padding-bottom: 19px;
+  }
+
+  &__list {
+    display: flex;
+  }
+  &__list li:not(:last-child) {
+    margin-right: 6px;
+  }
+  &__link {
+    padding: 0;
+  }
+  &__link::before {
+    background-color: transparent;
+  }
+  &__link span {
+    font-size: 14px;
+    background-color: var(--color-grey);
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
