@@ -1,0 +1,70 @@
+.oxford {
+  padding: 150px 0;
+  background-image: url("./img/oxford.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--color-grey);
+  @include laptop{
+    background-image: url('./img/oxford-laptop.png');
+  }
+  @include tablet {
+    background-image: url('./img/oxford-tablet.png');
+  }
+  @include mobile {
+    position: relative;
+    padding: 30px 0 110px 0;
+  }
+  &-container {
+    @include tablet {
+      padding: 0 36px;
+    }
+    @include mobile {
+      padding: 0 12px;
+    }
+  }
+  &-heading {
+    margin: 0;
+    font: var(--font-big-play);
+    color: #d5b986;
+    @include mobile {
+      font-size: 24px;
+      line-height: 28.8px;
+    }
+  }
+  &-subtitle {
+    margin: 0;
+    margin-bottom: 52px;
+    width: 40%;
+    font: var(--font-small-sans);
+    font-size: 48px;
+    line-height: 57.6px;
+    color: var(--color-white);
+    @include laptop {
+      width: 60%;
+    }
+    @include tablet {
+      width: 85%;
+    }
+    @include mobile {
+      margin: 0;
+      width: 55%;
+      font-size: 16px;
+      line-height: 19.6px;
+    }
+  }
+  &__link {
+    display: inline-block;
+    margin-left: 0;
+    padding: 21px 31px;
+    @include mobile {
+      position: absolute;
+      width: min-content;
+      padding: 22px 86px;
+      bottom: -93px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+    }
+  }
+}

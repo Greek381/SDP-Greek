@@ -1,0 +1,23 @@
+.copyright {
+  padding: 5px 0;
+  background-color: #f7f7f7;
+
+  &-flex {
+    display: flex;
+    justify-content: center;
+  }
+  &__text,
+  &__year {
+    margin: 0;
+    font: var(--font-small-sans);
+    color: var(--color-grey);
+  }
+  &__text {
+    position: relative;
+    margin-right: 20px;
+  }
+  &__text::after {
+    content: "\00AE";
+    position: absolute;
+  }
+}

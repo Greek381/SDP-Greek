@@ -1,0 +1,50 @@
+<section class="feedback">
+  <div class="container">
+    <h2 class="heading">
+      Мы всегда вам рады!
+    </h2>
+    <div class="feedback-content">
+      <div class="feedback-content-left">
+        <p class="feedback__subtitle">
+          Безусловно, новая модель организационной деятельности в значительной степени обусловливает важность распределения внутренних резервов и ресурсов.
+          <svg class="feedback-tooltip">
+            <use xlink:href="#tooltip"></use>
+          </svg>
+        </p>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="POST" id="formEvent" class="feedback-form" novalidate="novalidate" target="frame">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Как вас зовут?" class="feedback-input" data-validate-field="name">
+          </div>
+          <div class="form-group">
+            <input type="tel" name="phone" placeholder="Ваш телефон" class="feedback-input" data-validate-field="tel" data-validate-rules="phone">
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Ваш e-mail" class="feedback-input" data-validate-field="mail">
+          </div>
+          <button class="feedback-btn primary-link btn-reset"> Отправить </button>
+          <label class="checkbox-custom">
+            <input id="check" type="checkbox">
+            <span>
+              Принимаю
+              <a href="#" class="feedback-link">
+                пользовательское соглашение
+              </a>
+            </span>
+          </label>
+
+          <div class="feedback-callback">
+            Спасибо, мы вам перезвоним!
+          </div>
+        </form>
+      </div>
+
+      <div class="feedback-content-right">
+        <picture>
+          <source srcset="./img/form-tablet.png" media="(max-width: 940px)">
+          <img src="./img/form.png" alt="Форма" class="feedback__img">
+        </picture>
+      </div>
+    </div>
+    <iframe name="frame"></iframe>
+  </div>
+</section>

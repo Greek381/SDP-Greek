@@ -1,0 +1,21 @@
+:root {
+  //colors
+    --color-white: #ffffff;
+    --color-black: #333333;
+    --color-primary: #a65cf0;
+    --color-grey: #999999;
+    --color-primary-hover: #c998fb;
+    --color-primary-focusactive: #7033ac;
+
+
+  //fonts
+    --font-family-sans: "Open Sans", sans-serif;
+    --font-family-play: 'Playfair Display', serif;
+    --font-small-sans: 400 14px / 14px var(--font-family-sans);
+    --font-strong-sans: 600 16px / 20.8px var(--font-family-sans);
+    --font-middle-sans: 700 14px / 14px var(--font-family-sans);
+    --font-big-play: 900 60px / 72px var(--font-family-play);
+
+  //offsets
+    --section-offset: 35px;
+}
